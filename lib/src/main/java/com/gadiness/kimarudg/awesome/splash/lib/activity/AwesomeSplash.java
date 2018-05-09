@@ -91,7 +91,7 @@ abstract public class AwesomeSplash extends AppCompatActivity {
 
             @Override
             public void run() {
-                updateSubTitleText();
+                //updateSubTitleText();
             }
 
         };
