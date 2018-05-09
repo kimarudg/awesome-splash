@@ -24,6 +24,9 @@ import com.gadiness.kimarudg.awesome.splash.lib.model.ConfigSplash;
 import com.gadiness.kimarudg.awesome.splash.lib.utils.UIUtil;
 import com.gadiness.kimarudg.awesome.splash.lib.utils.ValidationUtil;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
 
@@ -44,6 +47,8 @@ abstract public class AwesomeSplash extends AppCompatActivity {
     private AppCompatTextView mTxtSubTitle;
     private FillableLoader mPathLogo;
     private FrameLayout mFl;
+    private TimerTask timerTask;
+    Timer timer = new Timer();
 
     boolean tasksRunning = false;
 
@@ -56,6 +61,18 @@ abstract public class AwesomeSplash extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // observe the subtitle every half second
+        timerTask = new TimerTask() {
+
+            @Override
+            public void run() {
+                updateSubTitleText();
+            }
+
+        };
+        timer.schedule(timerTask,0,500);//Update text every second
+
+
         new Thread(new Runnable() {
             public void run() {
                 animationIsStarted();
@@ -270,6 +287,9 @@ abstract public class AwesomeSplash extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 if (canEndAnimation()){
+                    if (timerTask !=null){
+                        timerTask.cancel();
+                    }
                     animationsFinished();
                 }else{
                     startTextAnimation();
