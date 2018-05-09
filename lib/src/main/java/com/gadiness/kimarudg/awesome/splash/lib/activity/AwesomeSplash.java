@@ -289,6 +289,10 @@ abstract public class AwesomeSplash extends AppCompatActivity {
         }).duration(mConfigSplash.getAnimSubTitleDuration()).playOn(mTxtSubTitle);
     }
 
+    public void updateSubTitleText(){
+        mTxtSubTitle.setText(changeSubTitleText());
+    }
+
 
     public void setSubTitleFont(String font) {
         Typeface type = Typeface.createFromAsset(getAssets(), font);
@@ -303,4 +307,6 @@ abstract public class AwesomeSplash extends AppCompatActivity {
     public abstract void animationIsStarted();
 
     public abstract boolean canEndAnimation();
+
+    public abstract String changeSubTitleText();
 }
