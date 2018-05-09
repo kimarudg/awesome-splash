@@ -1,13 +1,13 @@
 # AwesomeSplash
 
+[![](https://jitpack.io/v/kimarudg/awesome-splash.svg)](https://jitpack.io/#kimarudg/awesome-splash)
 
-
-<img src="https://github.com/kimarudg/awesome_splash/blob/master/rdme/web_res_512.png" width="96" height="96"/>
+<img src="https://github.com/kimarudg/awesome-splash/blob/master/rdme/web_res_512.png" width="96" height="96"/>
 
 Awesome-looking customizable splash screen
 
-<img src="https://github.com/kimarudg/awesome_splash/blob/master/rdme/logo_promo.gif" width="210" height="330"/>
-<img src="https://github.com/kimarudg/awesome_splash/blob/master/rdme/path_promo.gif" width="210" height="330"/>
+<img src="https://github.com/kimarudg/awesome-splash/blob/master/rdme/logo_promo.gif" width="210" height="330"/>
+<img src="https://github.com/kimarudg/awesome-splash/blob/master/rdme/path_promo.gif" width="210" height="330"/>
 
 Splash screens have been around for quite a while. It's the first thing the users see when they run your app, so make it simple yet eventful and impressionable.
 This library does exactly that, provides you with beautiful template screen, with wide range of customizations to fit your concept of the splash screen. 
@@ -20,7 +20,7 @@ Ready to see implementation details? Let's scroll.
 
 
 You can download the demo app [here]
-(https://github.com/kimarudg/awesome_splash/blob/master/rdme/awesome_splash_demo.apk?raw=true) 
+(https://github.com/kimarudg/awesome-splash/blob/master/rdme/awesome_splash_demo.apk?raw=true) 
 
 # Prerequisites/Credits
 
@@ -44,8 +44,8 @@ Add this to your build.grade:
 and then in dependencies:
 ```javascript
 	dependencies {
-	        compile 'com.github.kimarudg:awesome_splash:v1.0.0'
-	}
+            implementation 'com.github.kimarudg:awesome-splash:v1.0.2'
+    }
 ```
 
 Here is how you utilze the library in your java code:
