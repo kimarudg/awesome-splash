@@ -62,15 +62,6 @@ abstract public class AwesomeSplash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // observe the subtitle every half second
-        timerTask = new TimerTask() {
-
-            @Override
-            public void run() {
-                updateSubTitleText();
-            }
-
-        };
-        timer.schedule(timerTask,0,500);//Update text every second
 
 
         new Thread(new Runnable() {
@@ -95,6 +86,16 @@ abstract public class AwesomeSplash extends AppCompatActivity {
         mRlReveal = (RelativeLayout) findViewById(R.id.rlColor);
         mTxtTitle = (AppCompatTextView) findViewById(R.id.txtTitle);
         mTxtSubTitle = (AppCompatTextView) findViewById(R.id.txtSubTitle);
+
+        timerTask = new TimerTask() {
+
+            @Override
+            public void run() {
+                updateSubTitleText();
+            }
+
+        };
+        timer.schedule(timerTask,0,500);//Update text every second
 
 
         switch (flag) {
