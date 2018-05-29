@@ -313,7 +313,7 @@ public class ConfigSplash implements Serializable {
         this.titleFont = Defaults.EMPTY;
 
         //SubTitleText
-        this.subTitleSplash = Defaults.APP_TITLE;
+        this.subTitleSplash = Defaults.EMPTY;
         this.animSubTitleDuration = Defaults.ANIM_TEXT;
         this.animSubTitleTechnique = Techniques.BounceIn;
         this.subTitleTextSize = Defaults.TEXT_SIZE;
